@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <aside class="side-menu-container">
+        <ul class="side-menu">
+            <li class="side-menu-item">
+                <a class="side-menu-link" href="list">Ver Jogos</a>
+            </li>
+            <li class="side-menu-item">
+                <a class="side-menu-link" href="add-game">Cadastro de Jogos</a>
+            </li>
+            <li class="side-menu-item">
+                <a class="side-menu-link" href="add-genre">Cadastro de Generos</a>
+            </li>
+            <li class="side-menu-item">
+                <a class="side-menu-link" href="graph">Ver Grafico</a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <section id="list-container" class="hidden">
+            <h1>
+                List
+            </h1>
+        
+            <table>
+                <thead>
+                    <th>Image</th>
+                    <th>Id</th>
+                    <th>Description</th>
+                    <th>Desenvolvedor</th>
+                    <th>Genero</th>
+                    <th>Estilo</th>
+                    <th>Preco</th>
+                </thead>
+                <tbody id="game-table-body"></tbody>
+            </table>
+            <p class="hidden" id="table-no-records-placeholder">
+                Nenhum registro cadastrado
+            </p>
+        </section>
+
+        <section id="new-genre-form-container" class="hidden">
+            <h1>Cadastro Generos</h1>
+            <form id="genre-form">
+                <p>
+                    <label for="descript">Descrição do genero: *</label>
+                    <input required id="genre-descript">
+                </p>
+
+                <input type="submit" value="Salvar">
+            </form>
+        </section>
+
+        <section id="new-game-form-container" class="hidden">
+            <h1>Cadastro Games</h1>
+            <form id="game-form">
+                <p>
+                    <label for="descript">Descrição do jogo: *</label>
+                    <input id="game-descript" required name="descript">
+                </p>
+                <p>
+                    <label for="genre">Genero: *</label>
+                    <select required name="genre" id="game-genre-select"></select>
+                </p>
+                <p>
+                    <label for="style">Estilo: *</label>
+                    <input required name="style" id="game-style"></input>
+                </p>
+                <p>
+                    <label for="dev">Fabricante: *</label>
+                    <input id="game-dev" required name="dev">
+                </p>
+                <p>
+                    <label for="price">Preço: *</label>
+                    <input id="game-price" required type="number" name="price">
+                </p>
+                <p>
+                    <label for="img">Imagem: *</label>
+                    <input required id="game-image" type="file" name="img" accept="image/*">
+                </p>
+
+                <input type="submit" value="Salvar">
+            </form>
+        </section>
+        <section id="graph-container" class="hidden">
+            <h1>Graph</h1>
+            <canvas id="myChart"></canvas>
+            <p class="hidden" id="graph-no-records-placeholder">
+                Nenhum registro cadastrado
+            </p>
+        </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+</body>
+
+</html>

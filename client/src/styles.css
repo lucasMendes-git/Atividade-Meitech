@@ -1,0 +1,35 @@
+@import '../node_modules/water.css/out/water.css';
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+aside.side-menu-container {
+  margin-right: 3rem;
+  flex-shrink: 0;
+}
+
+aside.side-menu-container ul {
+  padding-left: 0;
+}
+
+aside.side-menu-container .side-menu {
+  list-style: none;
+}
+
+aside.side-menu-container .side-menu-item {
+  margin-bottom: 1rem;
+}
+
+aside.side-menu-container .side-menu-link {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#graph-container {
+  width: 70vw;
+}
