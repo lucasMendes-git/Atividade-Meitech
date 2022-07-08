@@ -1,6 +1,7 @@
 # Atividade-Meitech
 
 ++++++++++++++Server
+
 mySQL instalado, variáveis a serem configuradas no server/.env
 
 cd /server
@@ -14,6 +15,7 @@ npm start
 
 
 ++++++++++++++Client
+
 cd /client
 
 npm install
